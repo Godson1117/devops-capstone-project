@@ -61,7 +61,27 @@ def create_accounts():
 # LIST ALL ACCOUNTS
 ######################################################################
 
-# ... place you code here to LIST accounts ...
+@app.route("/accounts", methods=["GET"])
+def list_accounts():
+    """
+    List all Accounts
+    This endpoint returns all Accounts as a list
+    """
+    accounts = Account.all()
+    
+    # Logic to handle the list (empty or populated)
+    if accounts:
+        payload = json.dumps(accounts, default=str)
+    else:
+        payload = json.dumps([], default=str)
+
+    # Create the response object
+    response = make_response(payload, status.HTTP_200_OK)
+    
+    # CRITICAL FIX: Set the Content-Type header
+    response.headers['Content-Type'] = 'application/json'
+    
+    return response
 
 
 ######################################################################
