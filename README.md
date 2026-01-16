@@ -4,6 +4,8 @@
 ![Agile](https://img.shields.io/badge/Methodology-Agile%2FScrum-green)
 ![Type](https://img.shields.io/badge/Type-RESTful%20Microservice-orange)
 
+![Build Status](https://github.com/Godson1117/devops-capstone-project/actions/workflows/ci-build.yaml/badge.svg)
+
 ## Project Overview
 
 This repository contains the source code and documentation for the **Customer Accounts Microservice**. This project is the core component of the DevOps Capstone, designed to demonstrate the application of Agile methodologies, cloud-native development, and CI/CD automation.
